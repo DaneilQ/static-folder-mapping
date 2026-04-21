@@ -18,7 +18,7 @@ export type Config = {
 export const defaultConfig: Config = {
     extension: 'js',
     outputPath: './output',
-    pathMode: 'absolute',
+    pathMode: 'relative',
     variableName: 'staticFolder',
     typeName: 'StaticFolder',
     slugStyle: 'snake',
