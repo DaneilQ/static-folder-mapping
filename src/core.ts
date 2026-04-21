@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import pathLib from "path";
-import { pickSlugify } from "./utils.js";
-import type { Config } from "./types.js";
+import {pickSlugify} from "./utils.js";
+import type {Config} from "./types.js";
 
 type FileTree = { [key: string]: FileTree | string };
 
@@ -30,7 +30,7 @@ export async function recursiveChecking(
                 const storedPath =
                     config?.pathMode === "absolute"
                         ? fullPath
-                        : pathLib.relative("/" + ogPath, fullPath);
+                        : "/" + pathLib.relative(ogPath, fullPath);
 
                 acc = setNested(acc, keys, storedPath) as FileTree;
             }
