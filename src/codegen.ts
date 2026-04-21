@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import pathLib from "path";
 
-import {type Config, type Extension} from "./types";
+import {type Config, type Extension} from "./types.js";
 
 export default async (result: Record<string, unknown>, config: Config): Promise<void> => {
 

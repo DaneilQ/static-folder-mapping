@@ -1,7 +1,7 @@
-import codegen from "./codegen";
-import { recursiveChecking } from "./core";
-import type { Config } from "./types";
-import { defaultConfig } from "./types";
+import codegen from "./codegen.js";
+import { recursiveChecking } from "./core.js";
+import type { Config } from "./types.js";
+import { defaultConfig } from "./types.js";
 import pathLib from "path";
 
 export async function init(path: string, config?: Config) {
