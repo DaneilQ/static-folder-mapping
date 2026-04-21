@@ -29,7 +29,7 @@ export async function recursiveChecking(
 
                 const storedPath =
                     config?.pathMode === "absolute"
-                        ? "/" + fullPath
+                        ? fullPath
                         : pathLib.relative(ogPath, fullPath);
 
                 acc = setNested(acc, keys, storedPath) as FileTree;
