@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, afterEach } from "bun:test";
 import fs from "fs/promises";
 import pathLib from "path";
 import os from "os";
-import codegen from "../codegen.ts";
+import codegen from "../codegen";
 import type { Config } from "../types";
 
 let tmpDir: string;

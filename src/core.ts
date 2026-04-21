@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import pathLib from "path";
-import {pickSlugify} from "./utils.ts";
-import type {Config} from "./types";
+import { pickSlugify } from "./utils";
+import type { Config } from "./types";
 
 type FileTree = { [key: string]: FileTree | string };
 

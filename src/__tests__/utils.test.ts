@@ -4,7 +4,7 @@ import {
     slugifySnake,
     slugifyLower,
     pickSlugify,
-} from "../utils.ts";
+} from "../utils";
 
 describe("slugifyDefault", () => {
     it("lowercases text", () => {
