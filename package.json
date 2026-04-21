@@ -1,12 +1,31 @@
 {
   "name": "static-folder-mapping",
-  "module": "src/index.ts",
+  "version": "0.1.0",
+  "description": "Static folder mapping library",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "start": "bun src/index.ts",
     "test": "bun test",
     "clean": "rm -rf dist",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Daniel Quintero",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@types/bun": "latest",
