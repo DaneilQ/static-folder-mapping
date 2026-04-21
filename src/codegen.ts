@@ -5,7 +5,11 @@ import {type Config, type Extension} from "./types";
 
 export default async (result: Record<string, unknown>, config: Config): Promise<void> => {
 
-    const output = config.outputPath ?? './output';
+    const rawOutput = config.outputPath ?? './output';
+    // Resolve output against explicit basePath if provided, otherwise consumer cwd
+    const base = config.basePath ? pathLib.resolve(config.basePath) : process.cwd();
+    const output = pathLib.isAbsolute(rawOutput) ? rawOutput : pathLib.resolve(base, rawOutput);
+
     const extension: Extension = config.extension ?? 'js';
     const variableName = config.variableName ?? 'staticFolder';
 

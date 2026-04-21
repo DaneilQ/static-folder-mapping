@@ -11,6 +11,8 @@ export type Config = {
     slugStyle?: SlugStyle;
     variableName?: string;
     slugify?: (text: string) => string;
+    // If provided, relative input/output paths will be resolved against this instead of process.cwd()
+    basePath?: string;
 };
 
 export const defaultConfig: Config = {

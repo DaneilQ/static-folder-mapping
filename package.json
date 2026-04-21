@@ -1,6 +1,6 @@
 {
   "name": "static-folder-mapping",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Static folder mapping library",
   "type": "module",
   "main": "./dist/index.js",

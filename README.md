@@ -77,6 +77,9 @@ All options are optional. Defaults are shown below.
 | `pathMode` | `"relative"` \| `"absolute"` | `"absolute"`    | Whether stored paths are relative to the scanned folder or absolute. |
 | `slugStyle` | `"snake"` \| `"default"` \| `"lower"` \| `"preserve"` | `"snake"`       | How folder/file names are converted into object keys. |
 | `slugify` | `(text: string) => string` | —               | Custom slugify function. Overrides `slugStyle` when provided. |
+| `basePath` | `string` | — | Optional base directory used to resolve relative input/output paths. If not provided, relative paths are resolved against the consuming project's working directory (`process.cwd()`). |
+
+Relative `outputPath` and the `path` passed to `init()` are resolved against `config.basePath` when provided, otherwise against the current working directory of the process that calls `init()` (this makes the library behave correctly when installed as a dependency). You can pass absolute paths to skip resolution.
 
 ### `slugStyle` values
 
